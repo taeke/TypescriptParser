@@ -1,0 +1,29 @@
+{
+  "name": "TypescriptParser",
+  "version": "0.1.0",
+  "description": "Typescript Parser for PEGJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node specs/ --autotest --color"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taeke/TypescriptParser.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "Parser",
+    "PEGJs"
+  ],
+  "author": "Taeke van der Veen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taeke/TypescriptParser/issues"
+  },
+  "homepage": "https://github.com/taeke/TypescriptParser",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
+    "pegjs": "^0.8.0",
+    "tsd": "^0.6.3"
+  }
+}
