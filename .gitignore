@@ -32,3 +32,6 @@ typings
 
 # Exclude compiled ts files.
 specs/js/*.js
+
+# Temperary directory
+tmp
