@@ -1,48 +1,25 @@
 /*
- * JavaScript parser based on the grammar described in ECMA-262, 5th ed.
- * (http://www.ecma-international.org/publications/standards/Ecma-262.htm)
+ * TypeScript Grammar
+ * ==================
  *
- * The parser builds a tree representing the parsed JavaScript, composed of
- * basic JavaScript values, arrays and objects (basically JSON). It can be
- * easily used by various JavaScript processors, transformers, etc.
- *
- * Intentional deviations from ECMA-262, 5th ed.:
- *
- *   * The specification does not consider |FunctionDeclaration| and
- *     |FunctionExpression| as statements, but JavaScript implementations do and
- *     so are we. This syntax is actually used in the wild (e.g. by jQuery).
+ * Based on grammar from TypeScript Language Specification Version 1.5[1]. Which
+ * uses grammar from ECMA-262, 5.1 Edition [2] as it's base. Generated parser builds a
+ * syntax tree compatible with Mozilla SpiderMonkey Parser API [3]. 
  *
  * Limitations:
  *
- *   * Non-BMP characters are completely ignored to avoid surrogate
- *     pair handling (JavaScript strings in most implementations are AFAIK
- *     encoded in UTF-16, though this is not required by the specification --
- *     see ECMA-262, 5th ed., 4.3.16).
+ *   * Non-BMP characters are completely ignored to avoid surrogate pair
+ *     handling.
  *
  *   * One can create identifiers containing illegal characters using Unicode
  *     escape sequences. For example, "abcd\u0020efgh" is not a valid
  *     identifier, but it is accepted by the parser.
  *
- *   * Strict mode is not recognized. That means that within strict mode code,
- *     "implements", "interface", "let", "package", "private", "protected",
- *     "public", "static" and "yield" can be used as names. Many other
- *     restrictions and exceptions from ECMA-262, 5th ed., Annex C are also not
- *     applied.
- *
- *   * The parser does not handle regular expression literal syntax (basically,
- *     it treats anything between "/"'s as an opaque character sequence and also
- *     does not recognize invalid flags properly).
- *
- *   * The parser doesn't report any early errors except syntax errors (see
- *     ECMA-262, 5th ed., 16).
- *
- * At least some of these limitations should be fixed sometimes.
- *
- * Many thanks to inimino (http://inimino.org/~inimino/blog/) for his ES5 PEG
- * (http://boshi.inimino.org/3box/asof/1270029991384/PEG/ECMAScript_unified.peg),
- * which helped me to solve some problems (such as automatic semicolon
- * insertion) and also served to double check that I converted the original
- * grammar correctly.
+ * [1] http://http://www.typescriptlang.org/Content/TypeScript%20Language%20Specification.pdf
+ * [2] http://www.ecma-international.org/publications/standards/Ecma-262.htm
+ * [3] https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_API
+ * [4] http://inimino.org/~inimino/blog/
+ * [5] http://boshi.inimino.org/3box/asof/1270029991384/PEG/ECMAScript_unified.peg
  */
 
 start
@@ -352,37 +329,66 @@ RegularExpressionFlags
 
 /* Tokens */
 
-BreakToken      = "break"            !IdentifierPart
-CaseToken       = "case"             !IdentifierPart
-CatchToken      = "catch"            !IdentifierPart
-ContinueToken   = "continue"         !IdentifierPart
-DebuggerToken   = "debugger"         !IdentifierPart
-DefaultToken    = "default"          !IdentifierPart
-DeleteToken     = "delete"           !IdentifierPart { return "delete"; }
-DoToken         = "do"               !IdentifierPart
-ElseToken       = "else"             !IdentifierPart
-FalseToken      = "false"            !IdentifierPart
-FinallyToken    = "finally"          !IdentifierPart
-ForToken        = "for"              !IdentifierPart
-FunctionToken   = "function"         !IdentifierPart
-GetToken        = "get"              !IdentifierPart
-IfToken         = "if"               !IdentifierPart
-InstanceofToken = "instanceof"       !IdentifierPart { return "instanceof"; }
-InToken         = "in"               !IdentifierPart { return "in"; }
-NewToken        = "new"              !IdentifierPart
-NullToken       = "null"             !IdentifierPart
-ReturnToken     = "return"           !IdentifierPart
-SetToken        = "set"              !IdentifierPart
-SwitchToken     = "switch"           !IdentifierPart
-ThisToken       = "this"             !IdentifierPart
-ThrowToken      = "throw"            !IdentifierPart
-TrueToken       = "true"             !IdentifierPart
-TryToken        = "try"              !IdentifierPart
-TypeofToken     = "typeof"           !IdentifierPart { return "typeof"; }
-VarToken        = "var"              !IdentifierPart
-VoidToken       = "void"             !IdentifierPart { return "void"; }
-WhileToken      = "while"            !IdentifierPart
-WithToken       = "with"             !IdentifierPart
+AnyToken         = "any"         !IdentifierPart
+AsToken          = "as"          !IdentifierPart
+BooleanToken     = "boolean"     !IdentifierPart
+BreakToken       = "break"       !IdentifierPart
+CaseToken        = "case"        !IdentifierPart
+CatchToken       = "catch"       !IdentifierPart
+ClassToken       = "class"       !IdentifierPart
+ConstructorToken = "constructor" !IdentifierPart
+ConstToken       = "const"       !IdentifierPart
+ContinueToken    = "continue"    !IdentifierPart
+DebuggerToken    = "debugger"    !IdentifierPart
+DeclareToken     = "declare"     !IdentifierPart
+DefaultToken     = "default"     !IdentifierPart
+DeleteToken      = "delete"      !IdentifierPart
+DoToken          = "do"          !IdentifierPart
+ElseToken        = "else"        !IdentifierPart
+EnumToken        = "enum"        !IdentifierPart
+ExportToken      = "export"      !IdentifierPart
+ExtendsToken     = "extends"     !IdentifierPart
+FalseToken       = "false"       !IdentifierPart
+FinallyToken     = "finally"     !IdentifierPart
+ForToken         = "for"         !IdentifierPart
+FromToken        = "from"        !IdentifierPart
+FunctionToken    = "function"    !IdentifierPart
+GetToken         = "get"         !IdentifierPart
+IfToken          = "if"          !IdentifierPart
+ImplementsToken  = "implements"  !IdentifierPart
+ImportToken      = "import"      !IdentifierPart
+InstanceofToken  = "instanceof"  !IdentifierPart
+InterfaceToken   = "interface"   !IdentifierPart
+InToken          = "in"          !IdentifierPart
+LetToken         = "let"         !IdentifierPart
+ModuleToken      = "module"      !IdentifierPart
+NewToken         = "new"         !IdentifierPart
+NullToken        = "null"        !IdentifierPart
+NumberToken      = "number"      !IdentifierPart
+OfToken          = "of"          !IdentifierPart
+PackageToken     = "package"     !IdentifierPart
+PrivateToken     = "private"     !IdentifierPart
+ProtectedToken   = "protected"   !IdentifierPart
+PublicToken      = "public"      !IdentifierPart
+ReturnToken      = "return"      !IdentifierPart
+RequireToken     = "require"     !IdentifierPart
+SetToken         = "set"         !IdentifierPart
+StaticToken      = "static"      !IdentifierPart
+StringToken      = "string"      !IdentifierPart
+SuperToken       = "super"       !IdentifierPart
+SwitchToken      = "switch"      !IdentifierPart
+SymbolToken      = "symbol"      !IdentifierPart
+ThisToken        = "this"        !IdentifierPart
+ThrowToken       = "throw"       !IdentifierPart
+TrueToken        = "true"        !IdentifierPart
+TryToken         = "try"         !IdentifierPart
+TypeofToken      = "typeof"      !IdentifierPart
+TypeToken        = "type"        !IdentifierPart
+VarToken         = "var"         !IdentifierPart
+VoidToken        = "void"        !IdentifierPart
+WhileToken       = "while"       !IdentifierPart
+WithToken        = "with"        !IdentifierPart
+YieldToken       = "yield"       !IdentifierPart
 
 /*
  * Unicode Character Categories
@@ -1538,3 +1544,415 @@ SourceElement
 /* ===== A.8 JSON ===== */
 
 /* Irrelevant. */
+
+/* ===== TypeScript A.1 Types ===== */
+
+TypeParameters
+  = "NO MATCH JUST A PLACEHOLDER"
+
+TypeParameterList
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+TypeParameter
+  = "NO MATCH JUST A PLACEHOLDER"
+
+Constraint
+  = "NO MATCH JUST A PLACEHOLDER"
+
+TypeArguments
+  = "NO MATCH JUST A PLACEHOLDER"
+
+TypeArgumentList
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+TypeArgument
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+Type
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+PrimaryOrUnionType
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+PrimaryType  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ParenthesizedType
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+PredefinedType  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+TypeReference  
+  = "NO MATCH JUST A PLACEHOLDER"
+
+TypeName
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ModuleName
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ObjectType  
+  = "NO MATCH JUST A PLACEHOLDER"
+
+TypeBody
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+TypeMemberList
+  = "NO MATCH JUST A PLACEHOLDER"
+
+TypeMember
+  = "NO MATCH JUST A PLACEHOLDER"
+
+ArrayType
+  = "NO MATCH JUST A PLACEHOLDER"
+
+TupleType
+  = "NO MATCH JUST A PLACEHOLDER"
+
+TupleElementTypes
+  = "NO MATCH JUST A PLACEHOLDER"
+
+TupleElementType
+  = "NO MATCH JUST A PLACEHOLDER"
+
+UnionType
+  = "NO MATCH JUST A PLACEHOLDER"
+
+FunctionType
+  = "NO MATCH JUST A PLACEHOLDER"
+
+ConstructorType
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+TypeQuery
+  = "NO MATCH JUST A PLACEHOLDER"
+
+TypeQueryExpression
+  = "NO MATCH JUST A PLACEHOLDER"
+
+PropertySignature
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+// PropertyName => Avialable in javascript grammer A.3
+
+CallSignature
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ParameterList
+  = "NO MATCH JUST A PLACEHOLDER"
+
+RequiredParameterList
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+RequiredParameter
+  = "NO MATCH JUST A PLACEHOLDER"
+
+AccessibilityModifier
+  = "NO MATCH JUST A PLACEHOLDER"
+
+OptionalParameterList
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+OptionalParameter
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+RestParameter
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ConstructSignature  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+IndexSignature  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+MethodSignature  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+TypeAliasDeclaration  
+  = "NO MATCH JUST A PLACEHOLDER"
+
+/* ===== TypeScript A.2 Expressions ===== */
+
+// PropertyAssignment => Avialable in javascript grammer A.3
+
+GetAccessor
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+SetAccessor  
+  = "NO MATCH JUST A PLACEHOLDER"
+
+// ElementList => Avialable in javascript grammer A.3
+
+SpreadElement
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+// CallExpression => Avialable in javascript grammer A.3
+
+// FunctionExpression => Avialable in javascript grammer A.3
+
+// AssignmentExpression => Avialable in javascript grammer A.3
+
+ArrowFunctionExpression
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ArrowFormalParameters
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+// Arguments => Avialable in javascript grammer A.3
+
+// UnaryExpression => Avialable in javascript grammer A.3
+
+/* ===== TypeScript A.3 Statements ===== */
+
+// VariableDeclaration => Avialable in javascript grammer A.4
+
+SimpleVariableDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+TypeAnnotation
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+DestructuringVariableDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+BindingPattern  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ObjectBindingPattern
+  = "NO MATCH JUST A PLACEHOLDER"
+
+BindingPropertyList
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+BindingProperty
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ArrayBindingPattern
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+BindingElementList
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+BindingElement
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+BindingRestElement
+  = "NO MATCH JUST A PLACEHOLDER"
+
+/* ===== TypeScript A.4 Functions ===== */
+
+//FunctionDeclaration => Avialable in javascript grammer A.5
+
+FunctionOverloads
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+FunctionOverload  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+FunctionImplementation  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ClassOrInterfaceTypeList  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+InterfaceExtendsClause  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ClassOrInterfaceType  
+  = "NO MATCH JUST A PLACEHOLDER"
+
+/* ===== TypeScript A.5 Interfaces ===== */
+
+InterfaceDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+
+/* ===== TypeScript A.6 Classes ===== */
+
+ClassDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ClassHeritage  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ClassExtendsClause
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ClassType  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ImplementsClause
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ClassBody
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ClassElements
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ClassElement
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ConstructorDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ConstructorOverloads
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ConstructorOverload
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ConstructorImplementation  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+PropertyMemberDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+MemberVariableDeclaration  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+MemberFunctionDeclaration  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+MemberFunctionOverloads
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+MemberFunctionOverload  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+MemberFunctionImplementation  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+MemberAccessorDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+IndexMemberDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+
+/* ===== TypeScript A.7 Enums ===== */
+
+EnumDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+
+EnumBody
+  = "NO MATCH JUST A PLACEHOLDER"
+
+EnumMemberList
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+EnumMember
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+EnumValue  
+  = "NO MATCH JUST A PLACEHOLDER"
+
+/* ===== TypeScript A.8 Internal Modules ===== */
+
+ModuleDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+IdentifierPath  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ModuleBody  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ModuleElements
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ModuleElement  
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ImportDeclaration  
+  = "NO MATCH JUST A PLACEHOLDER"
+
+EntityName  
+  = "NO MATCH JUST A PLACEHOLDER"
+
+/* ===== TypeScript A.9 Source Files and External Modules ===== */
+
+SourceFile
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ImplementationSourceFile
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ImplementationElements
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ImplementationElement
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+DeclarationSourceFile
+  = "NO MATCH JUST A PLACEHOLDER"
+
+DeclarationElements
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+DeclarationElement  
+  = "NO MATCH JUST A PLACEHOLDER"
+
+ExternalImportDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+ExternalModuleReference
+  = "NO MATCH JUST A PLACEHOLDER"
+
+ExportAssignment
+  = "NO MATCH JUST A PLACEHOLDER"
+
+/* ===== TypeScript A.10 Ambients ===== */
+
+AmbientDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+
+AmbientVariableDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+
+AmbientFunctionDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+
+AmbientClassDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+AmbientClassBody  
+  = "NO MATCH JUST A PLACEHOLDER"
+
+AmbientClassBodyElements
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+AmbientClassBodyElement
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+AmbientConstructorDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+
+AmbientPropertyMemberDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+
+AmbientEnumDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+AmbientModuleDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+
+AmbientModuleBody
+  = "NO MATCH JUST A PLACEHOLDER"
+
+AmbientModuleElements
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+AmbientModuleElement
+  = "NO MATCH JUST A PLACEHOLDER"
+  
+AmbientExternalModuleDeclaration
+  = "NO MATCH JUST A PLACEHOLDER"
+
+AmbientExternalModuleBody
+  = "NO MATCH JUST A PLACEHOLDER"
+
+AmbientExternalModuleElements
+  = "NO MATCH JUST A PLACEHOLDER"
+
+AmbientExternalModuleElement
+  = "NO MATCH JUST A PLACEHOLDER"
