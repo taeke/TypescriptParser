@@ -25,7 +25,7 @@
 start
   = __ program:Program __ { return program; }
 
-/* ===== A.1 Lexical Grammar ===== */
+/* ===== ECMA-262 A.1 Lexical Grammar ===== */
 
 SourceCharacter
   = .
@@ -463,14 +463,14 @@ _
 __
   = (WhiteSpace / LineTerminatorSequence / Comment)*
 
-/* ===== A.2 Number Conversions ===== */
+/* ===== ECMA-262 A.2 Number Conversions ===== */
 
 /*
  * Rules from this section are either unused or merged into previous section of
  * the grammar.
  */
 
-/* ===== A.3 Expressions ===== */
+/* ===== ECMA-262 A.3 Expressions ===== */
 
 PrimaryExpression
   = ThisToken       { return { type: "This" }; }
@@ -1119,7 +1119,7 @@ ExpressionNoIn
       return result;
     }
 
-/* ===== A.4 Statements ===== */
+/* ===== ECMA-262 A.4 Statements ===== */
 
 /*
  * The specification does not consider |FunctionDeclaration| and
@@ -1467,7 +1467,7 @@ Finally
 DebuggerStatement
   = DebuggerToken EOS { return { type: "DebuggerStatement" }; }
 
-/* ===== A.5 Functions and Programs ===== */
+/* ===== ECMA-262 A.5 Functions and Programs ===== */
 
 FunctionDeclaration
   = FunctionToken __ name:Identifier __
@@ -1530,18 +1530,18 @@ SourceElements
 SourceElement
   = Statement
 
-/* ===== A.6 Universal Resource Identifier Character Classes ===== */
+/* ===== ECMA-262 A.6 Universal Resource Identifier Character Classes ===== */
 
 /* Irrelevant. */
 
-/* ===== A.7 Regular Expressions ===== */
+/* ===== ECMA-262 A.7 Regular Expressions ===== */
 
 /*
  * We treat regular expressions as opaque character sequences and we do not use
  * rules from this part of the grammar to parse them further.
  */
 
-/* ===== A.8 JSON ===== */
+/* ===== ECMA-262 A.8 JSON ===== */
 
 /* Irrelevant. */
 
@@ -1634,7 +1634,7 @@ TypeQueryExpression
 PropertySignature
   = "NO MATCH JUST A PLACEHOLDER"
   
-// PropertyName => Avialable in javascript grammer A.3
+// PropertyName => Avialable in javascript grammer ECMA-262 A.3
 
 CallSignature
   = "NO MATCH JUST A PLACEHOLDER"
@@ -1674,7 +1674,7 @@ TypeAliasDeclaration
 
 /* ===== TypeScript A.2 Expressions ===== */
 
-// PropertyAssignment => Avialable in javascript grammer A.3
+// PropertyAssignment => Avialable in javascript grammer ECMA-262 A.3
 
 GetAccessor
   = "NO MATCH JUST A PLACEHOLDER"
@@ -1682,16 +1682,16 @@ GetAccessor
 SetAccessor  
   = "NO MATCH JUST A PLACEHOLDER"
 
-// ElementList => Avialable in javascript grammer A.3
+// ElementList => Avialable in javascript grammer ECMA-262 A.3
 
 SpreadElement
   = "NO MATCH JUST A PLACEHOLDER"
   
-// CallExpression => Avialable in javascript grammer A.3
+// CallExpression => Avialable in javascript grammer ECMA-262 A.3
 
-// FunctionExpression => Avialable in javascript grammer A.3
+// FunctionExpression => Avialable in javascript grammer ECMA-262 A.3
 
-// AssignmentExpression => Avialable in javascript grammer A.3
+// AssignmentExpression => Avialable in javascript grammer ECMA-262 A.3
 
 ArrowFunctionExpression
   = "NO MATCH JUST A PLACEHOLDER"
@@ -1699,13 +1699,13 @@ ArrowFunctionExpression
 ArrowFormalParameters
   = "NO MATCH JUST A PLACEHOLDER"
   
-// Arguments => Avialable in javascript grammer A.3
+// Arguments => Avialable in javascript grammer ECMA-262 A.3
 
-// UnaryExpression => Avialable in javascript grammer A.3
+// UnaryExpression => Avialable in javascript grammer ECMA-262 A.3
 
 /* ===== TypeScript A.3 Statements ===== */
 
-// VariableDeclaration => Avialable in javascript grammer A.4
+// VariableDeclaration => Avialable in javascript grammer ECMA-262 A.4
 
 SimpleVariableDeclaration
   = "NO MATCH JUST A PLACEHOLDER"
@@ -1742,7 +1742,7 @@ BindingRestElement
 
 /* ===== TypeScript A.4 Functions ===== */
 
-//FunctionDeclaration => Avialable in javascript grammer A.5
+//FunctionDeclaration => Avialable in javascript grammer ECMA-262 A.5
 
 FunctionOverloads
   = "NO MATCH JUST A PLACEHOLDER"
