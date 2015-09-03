@@ -1188,6 +1188,7 @@ VariableDeclarationListNoIn
       return result;
     }
 
+/* Moved to Typescript TypeScript A.3 Statements
 VariableDeclaration
   = name:Identifier value:(__ Initialiser)? {
       return {
@@ -1195,7 +1196,7 @@ VariableDeclaration
         name:  name,
         value: value !== null ? value[1] : null
       };
-    }
+    } */
 
 VariableDeclarationNoIn
   = name:Identifier value:(__ InitialiserNoIn)? {
@@ -1569,19 +1570,33 @@ TypeArgument
   = "NO MATCH JUST A PLACEHOLDER"
   
 Type
-  = "NO MATCH JUST A PLACEHOLDER"
+  = PrimaryOrUnionType /
+    FunctionType /
+    ConstructorType
   
 PrimaryOrUnionType
-  = "NO MATCH JUST A PLACEHOLDER"
+  = PrimaryType /
+    UnionType
   
 PrimaryType  
-  = "NO MATCH JUST A PLACEHOLDER"
+  = ParenthesizedType /
+    PredefinedType /
+    TypeReference /
+    ObjectType /
+    ArrayType /
+    TupleType /
+    TypeQuery
   
 ParenthesizedType
   = "NO MATCH JUST A PLACEHOLDER"
   
 PredefinedType  
-  = "NO MATCH JUST A PLACEHOLDER"
+  = token:(AnyToken / NumberToken / BooleanToken / StringToken / VoidToken) {
+    return {
+      type: "PredefinedType",
+      predefined:  token !== null ? token[0] : null,
+    }
+ }
   
 TypeReference  
   = "NO MATCH JUST A PLACEHOLDER"
@@ -1705,13 +1720,25 @@ ArrowFormalParameters
 
 /* ===== TypeScript A.3 Statements ===== */
 
-// VariableDeclaration => Avialable in javascript grammer ECMA-262 A.4
+// Modified version. Orignial in javascript grammer ECMA-262 A.4 is commented out.
+VariableDeclaration
+  = SimpleVariableDeclaration /
+    DestructuringVariableDeclaration
 
 SimpleVariableDeclaration
-  = "NO MATCH JUST A PLACEHOLDER"
+  = name:Identifier typeAnnotation:(__ TypeAnnotation)? value:(__ Initialiser)? {
+      return {
+        type:  "SimpleVariableDeclaration",
+        name:  name,
+        value: value !== null ? value[1] : null,
+        typeAnnotation: typeAnnotation !== null ? typeAnnotation[1] : null
+      };
+    }
   
 TypeAnnotation
-  = "NO MATCH JUST A PLACEHOLDER"
+  = ":" typeAnnotation:Type {
+    return typeAnnotation
+  }
   
 DestructuringVariableDeclaration
   = "NO MATCH JUST A PLACEHOLDER"

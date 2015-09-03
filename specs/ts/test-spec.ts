@@ -33,13 +33,13 @@ describe('javascriptParser', () => {
 	});
 });
 
-describe('javascriptParser', () => {
-	it('should parse javasccript', () => {
+describe('typescriptParser', () => {
+	it('should parse typesccript', () => {
 		jasmine.getFixtures().fixturesPath = './base/src/';
 		var grammer = readFixtures('typescript.pegjs');
 		var parser = pegjs.buildParser(grammer);
 		
-		var result = parser.parse('var a = 1;');
+		var result = parser.parse('var a:string = 1;');
 		
         expect(result.elements[0].type).toBe('VariableStatement');
         expect(result.elements[0].declarations[0].name).toBe('a');
