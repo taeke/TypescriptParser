@@ -39,7 +39,7 @@ describe('typescriptParser', () => {
 		var grammer = readFixtures('typescript.pegjs');
 		var parser = pegjs.buildParser(grammer);
 		
-		var result = parser.parse('var a:string = 1;');
+		var result = parser.parse('var a:string = "test";');
 		
         expect(result.elements[0].type).toBe('VariableStatement');
         expect(result.elements[0].declarations[0].name).toBe('a');
