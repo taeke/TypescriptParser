@@ -43,6 +43,6 @@ describe('typescriptParser', () => {
 		
         expect(result.elements[0].type).toBe('VariableStatement');
         expect(result.elements[0].declarations[0].name).toBe('a');
-        expect(result.elements[0].declarations[0].value.value).toBe(1);
+        expect(result.elements[0].declarations[0].value.value).toBe("test");
 	});
 });
