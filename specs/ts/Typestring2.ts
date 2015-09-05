@@ -11,7 +11,7 @@ var ts: any = require('typescript');
 	 public static _filename = '_typestring.ts';
 	
 	/**
-    * Compile a string of TypeScript, return as a string of JavaScript
+      * Compile a string of TypeScript, return as a string of JavaScript
 	*
 	* @param {String} input - TypeScript to compile
 	* @param {Object} [refs] - map of referenced filenames to content
