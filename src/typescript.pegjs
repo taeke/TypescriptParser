@@ -1579,13 +1579,15 @@ PrimaryOrUnionType
     UnionType
   
 PrimaryType  
-  = ParenthesizedType /
-    PredefinedType /
-    TypeReference /
-    ObjectType /
-    ArrayType /
-    TupleType /
-    TypeQuery
+  =  __ primaryType:(ParenthesizedType /
+      PredefinedType /
+      TypeReference /
+      ObjectType /
+      ArrayType /
+      TupleType /
+      TypeQuery) __ arrayType:(ArrayType)? {
+        return arrayType !== null ? [primaryType].concat(arrayType) : [primaryType]
+      } 
   
 ParenthesizedType
   = "NO MATCH JUST A PLACEHOLDER"
@@ -1619,8 +1621,13 @@ TypeMemberList
 TypeMember
   = "NO MATCH JUST A PLACEHOLDER"
 
+
 ArrayType
-  = "NO MATCH JUST A PLACEHOLDER"
+  = __ "[]" {
+    return {
+      type: "ArrayType"
+    }
+  }
 
 TupleType
   = "NO MATCH JUST A PLACEHOLDER"
@@ -1726,12 +1733,12 @@ VariableDeclaration
     DestructuringVariableDeclaration
 
 SimpleVariableDeclaration
-  = name:Identifier typeAnnotation:(__ TypeAnnotation)? value:(__ Initialiser)? {
+  = name:Identifier __ typeAnnotations:(TypeAnnotation)? value:(__ Initialiser)? {
       return {
         type:  "SimpleVariableDeclaration",
         name:  name,
         value: value !== null ? value[1] : null,
-        typeAnnotation: typeAnnotation !== null ? typeAnnotation[1] : null
+        typeAnnotations: typeAnnotations
       };
     }
   

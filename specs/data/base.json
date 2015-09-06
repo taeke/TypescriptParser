@@ -1,0 +1,12 @@
+		{ 
+			"code": "var a: string = 'test",
+			"result" : {
+				"type": "Program",
+				"elements" :[
+					{ "type": "VariableStatement",
+						"declarations":[
+						]
+					}
+				]
+			} 
+		}

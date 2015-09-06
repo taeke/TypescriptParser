@@ -1,0 +1,90 @@
+{
+	"testData": {
+		"items": [
+			{
+				"code": "var a: number = 1",
+				"result": {
+					"type": "Program",
+					"elements": [
+						{
+							"type": "VariableStatement",
+							"declarations": [
+								{
+									"type": "SimpleVariableDeclaration",
+									"name": "a",
+									"value": {
+										"type": "NumericLiteral",
+										"value": 1
+									},
+									"typeAnnotations": [
+										{
+											"type": "PredefinedType",
+											"predefined": "number"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"code": "var a: string = 'test'",
+				"result": {
+					"type": "Program",
+					"elements": [
+						{
+							"type": "VariableStatement",
+							"declarations": [
+								{
+									"type": "SimpleVariableDeclaration",
+									"name": "a",
+									"value": {
+										"type": "StringLiteral",
+										"value": "test"
+									},
+									"typeAnnotations": [
+										{
+											"type": "PredefinedType",
+											"predefined": "string"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"code": "var a: string[] = 'test'",
+				"result": {
+					"type": "Program",
+					"elements": [
+						{
+							"type": "VariableStatement",
+							"declarations": [
+								{
+									"type": "SimpleVariableDeclaration",
+									"name": "a",
+									"value": {
+										"type": "StringLiteral",
+										"value": "test"
+									},
+									"typeAnnotations": [
+										{
+											"type": "PredefinedType",
+											"predefined": "string"
+										},
+										{
+											"type": "ArrayType"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			}
+		]
+	}
+}

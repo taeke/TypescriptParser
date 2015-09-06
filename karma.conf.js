@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Sun Aug 30 2015 12:52:54 GMT+0200 (West-Europa (zomertijd))
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -15,16 +15,16 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'specs/js/**/*spec.js',
-      { pattern: './node_modules/pegjs/examples/javascript.pegjs',
-          watched: true,
-          served:  true,
-          included: false
-      },
-      { pattern: './src/typescript.pegjs',
-          watched: true,
-          served:  true,
-          included: false
+      'specs/js/**/*Spec.js', {
+        pattern: './src/typescript.pegjs',
+        watched: true,
+        served: true,
+        included: false
+      }, {
+        pattern: './specs/data/data.json',
+        watched: true,
+        served: true,
+        included: false
       }
     ],
 
@@ -37,12 +37,12 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'specs/js/**/*.js': [ 'browserify' ]
+      'specs/js/**/*.js': ['browserify']
     },
 
-	  browserify: {
+    browserify: {
       debug: true,
-      transform: [ 'brfs' ]
+      transform: ['brfs']
     },
 
     // test results reporter to use
