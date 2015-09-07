@@ -1,9 +1,8 @@
 /// <reference path='./../../typings/tsd.d.ts' />
-/// <reference path='./ITestInfo.d.ts' />
+/// <reference path='./ITestData.d.ts' />
 
 var typestring = require('./Typestring');
 var pegjs = require('pegjs');
-var testen: ITestInfo[] = [];
 
 describe('typescript compile', () => {
 	it('should throw an exception on a syntax error.', () => {
@@ -14,8 +13,8 @@ describe('typescript compile', () => {
 	});
 
 	jasmine.getFixtures().fixturesPath = './base/specs/data/';
-	var data: any = JSON.parse(readFixtures('data.json'));
-	data.testData.items.forEach((test: any) => {
+	var testData: ITestData = JSON.parse(readFixtures('data.json'));
+	testData.items.forEach((test: ITestDataItem) => {
 		it('should not throw an exception if the syntax is correct.', () => {
 			// arrange
 			
@@ -27,8 +26,8 @@ describe('typescript compile', () => {
 
 describe('typescript parse', () => {
 	jasmine.getFixtures().fixturesPath = './base/specs/data/';
-	var data: any = JSON.parse(readFixtures('data.json'));
-	data.testData.items.forEach((test: any) => {
+	var testData: ITestData = JSON.parse(readFixtures('data.json'));
+	testData.items.forEach((test: ITestDataItem) => {
 		it('should parse typesccript', () => {
 			// arrange
 			jasmine.getFixtures().fixturesPath = './base/src/';

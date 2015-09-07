@@ -1561,13 +1561,24 @@ Constraint
   = "NO MATCH JUST A PLACEHOLDER"
 
 TypeArguments
-  = "NO MATCH JUST A PLACEHOLDER"
+  = "<" typeArgumentList:TypeArgumentList ">" {
+  return {
+    type: "TypeArguments",
+    typeArgumentList: typeArgumentList
+  }
+}
 
 TypeArgumentList
-  = "NO MATCH JUST A PLACEHOLDER"
+  = head:TypeArgument tail:(__ "," __ TypeArgument)* {
+      var result = head;
+      for (var i = 0; i < tail.length; i++) {
+        result.push(tail[i][3]);
+      }
+      return result;
+    }
   
 TypeArgument
-  = "NO MATCH JUST A PLACEHOLDER"
+  = Type
   
 Type
   = PrimaryOrUnionType /
@@ -1601,14 +1612,25 @@ PredefinedType
  }
   
 TypeReference  
-  = "NO MATCH JUST A PLACEHOLDER"
+  = typeName:TypeName __ typeArguments:TypeArguments* {
+    return {
+      type: "TypeReference",
+      typeName: typeName,
+      typeArguments: typeArguments
+    }
+  }
 
 TypeName
-  = "NO MATCH JUST A PLACEHOLDER"
-  
+  = moduleNames:ModuleName* name:Identifier {
+     return {
+        name: name,
+        moduleNames: moduleNames
+     }
+  }
+
 ModuleName
-  = "NO MATCH JUST A PLACEHOLDER"
-  
+  = name:Identifier "." { return name; }
+    
 ObjectType  
   = "NO MATCH JUST A PLACEHOLDER"
 
