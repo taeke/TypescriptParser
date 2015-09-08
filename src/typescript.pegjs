@@ -1144,6 +1144,7 @@ Statement
   / DebuggerStatement
   / FunctionDeclaration
   / FunctionExpression
+  / EnumDeclaration
 
 Block
   = "{" __ statements:(StatementList __)? "}" {
@@ -1888,19 +1889,37 @@ IndexMemberDeclaration
 /* ===== TypeScript A.7 Enums ===== */
 
 EnumDeclaration
-  = "NO MATCH JUST A PLACEHOLDER"
+  = ConstToken? __ EnumToken __ name:Identifier __ "{" enumBody: EnumBody? "}" EOS {
+  return {
+    type: "EnumDeclaration",
+    name: name,
+    enumBody: enumBody
+  }
+}
 
 EnumBody
-  = "NO MATCH JUST A PLACEHOLDER"
+  = EnumMemberList
 
 EnumMemberList
-  = "NO MATCH JUST A PLACEHOLDER"
+  = head:EnumMember tail:(__ "," __ EnumMember)* {
+      var result = [head];
+      for (var i = 0; i < tail.length; i++) {
+        result.push(tail[i][3]);
+      }
+      return result;
+    }
   
 EnumMember
-  = "NO MATCH JUST A PLACEHOLDER"
+  = propertyName: PropertyName enumValue:(__ "=" __ EnumValue)?
+    {
+      return {
+        propertyName: propertyName,
+        enumValue: enumValue !== null ? enumValue[3] : null
+      }
+    } 
   
 EnumValue  
-  = "NO MATCH JUST A PLACEHOLDER"
+  = AssignmentExpression
 
 /* ===== TypeScript A.8 Internal Modules ===== */
 

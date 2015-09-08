@@ -1,0 +1,557 @@
+{
+	"items": [
+		{
+			"source": "http://www.typescriptlang.org/Handbook Basic Types Boolean",
+			"code": "var isDone: boolean = false;",
+			"result": {
+				"type": "Program",
+				"elements": [
+					{
+						"type": "VariableStatement",
+						"declarations": [
+							{
+								"type": "SimpleVariableDeclaration",
+								"name": "isDone",
+								"value": {
+									"type": "BooleanLiteral",
+									"value": false
+								},
+								"typeAnnotations": [
+									{
+										"type": "PredefinedType",
+										"predefined": "boolean"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"source": "http://www.typescriptlang.org/Handbook Basic Types Number",
+			"code": "var height: number = 6;",
+			"result": {
+				"type": "Program",
+				"elements": [
+					{
+						"type": "VariableStatement",
+						"declarations": [
+							{
+								"type": "SimpleVariableDeclaration",
+								"name": "height",
+								"value": {
+									"type": "NumericLiteral",
+									"value": 6
+								},
+								"typeAnnotations": [
+									{
+										"type": "PredefinedType",
+										"predefined": "number"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"source": "http://www.typescriptlang.org/Handbook Basic Types String",
+			"code": "var name: string = \"bob\"; name = 'smith';",
+			"result": {
+				"type": "Program",
+				"elements": [
+					{
+						"type": "VariableStatement",
+						"declarations": [
+							{
+								"type": "SimpleVariableDeclaration",
+								"name": "name",
+								"value": {
+									"type": "StringLiteral",
+									"value": "bob"
+								},
+								"typeAnnotations": [
+									{
+										"type": "PredefinedType",
+										"predefined": "string"
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "AssignmentExpression",
+						"operator": "=",
+						"left": {
+							"type": "Variable",
+							"name": "name"
+						},
+						"right": {
+							"type": "StringLiteral",
+							"value": "smith"
+						}
+					}
+				]
+			}
+		},
+		{
+			"source": "http://www.typescriptlang.org/Handbook Basic Types Array",
+			"code": "var list:number[] = [1, 2, 3];",
+			"result": {
+				"type": "Program",
+				"elements": [
+					{
+						"type": "VariableStatement",
+						"declarations": [
+							{
+								"type": "SimpleVariableDeclaration",
+								"name": "list",
+								"value": {
+									"type": "ArrayLiteral",
+									"elements": [
+										{
+											"type": "NumericLiteral",
+											"value": 1
+										},
+										{
+											"type": "NumericLiteral",
+											"value": 2
+										},
+										{
+											"type": "NumericLiteral",
+											"value": 3
+										}
+									]
+								},
+								"typeAnnotations": [
+									{
+										"type": "PredefinedType",
+										"predefined": "number"
+									},
+									{
+										"type": "ArrayType"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"source": "http://www.typescriptlang.org/Handbook Basic Types Array",
+			"code": "var list:Array<number> = [1, 2, 3];",
+			"result": {
+				"type": "Program",
+				"elements": [
+					{
+						"type": "VariableStatement",
+						"declarations": [
+							{
+								"type": "SimpleVariableDeclaration",
+								"name": "list",
+								"value": {
+									"type": "ArrayLiteral",
+									"elements": [
+										{
+											"type": "NumericLiteral",
+											"value": 1
+										},
+										{
+											"type": "NumericLiteral",
+											"value": 2
+										},
+										{
+											"type": "NumericLiteral",
+											"value": 3
+										}
+									]
+								},
+								"typeAnnotations": [
+									{
+										"type": "TypeReference",
+										"typeName": {
+											"name": "Array",
+											"moduleNames": []
+										},
+										"typeArguments": [
+											{
+												"type": "TypeArguments",
+												"typeArgumentList": [
+													{
+														"type": "PredefinedType",
+														"predefined": "number"
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"source": "http://www.typescriptlang.org/Handbook Basic Types Enum",
+			"code": "enum Color {Red, Green, Blue}; var c: Color = Color.Green;",
+			"result": {
+				"type": "Program",
+				"elements": [
+					{
+						"type": "EnumDeclaration",
+						"name": "Color",
+						"enumBody": [
+							{
+								"propertyName": "Red",
+								"enumValue": null
+							},
+							{
+								"propertyName": "Green",
+								"enumValue": null
+							},
+							{
+								"propertyName": "Blue",
+								"enumValue": null
+							}
+						]
+					},
+					{
+						"type": "VariableStatement",
+						"declarations": [
+							{
+								"type": "SimpleVariableDeclaration",
+								"name": "c",
+								"value": {
+									"type": "PropertyAccess",
+									"base": {
+										"type": "Variable",
+										"name": "Color"
+									},
+									"name": "Green"
+								},
+								"typeAnnotations": [
+									{
+										"type": "TypeReference",
+										"typeName": {
+											"name": "Color",
+											"moduleNames": []
+										},
+										"typeArguments": []
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"source": "http://www.typescriptlang.org/Handbook Basic Types Enum",
+			"code": "enum Color {Red = 1, Green, Blue}; var c: Color = Color.Green;",
+			"result": {
+				"type": "Program",
+				"elements": [
+					{
+						"type": "EnumDeclaration",
+						"name": "Color",
+						"enumBody": [
+							{
+								"propertyName": "Red",
+								"enumValue": {
+									"type": "NumericLiteral",
+									"value": 1
+								}
+							},
+							{
+								"propertyName": "Green",
+								"enumValue": null
+							},
+							{
+								"propertyName": "Blue",
+								"enumValue": null
+							}
+						]
+					},
+					{
+						"type": "VariableStatement",
+						"declarations": [
+							{
+								"type": "SimpleVariableDeclaration",
+								"name": "c",
+								"value": {
+									"type": "PropertyAccess",
+									"base": {
+										"type": "Variable",
+										"name": "Color"
+									},
+									"name": "Green"
+								},
+								"typeAnnotations": [
+									{
+										"type": "TypeReference",
+										"typeName": {
+											"name": "Color",
+											"moduleNames": []
+										},
+										"typeArguments": []
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"source": "http://www.typescriptlang.org/Handbook Basic Types Enum",
+			"code": "enum Color {Red = 1, Green = 2, Blue = 4}; var c: Color = Color.Green;",
+			"result": {
+				"type": "Program",
+				"elements": [
+					{
+						"type": "EnumDeclaration",
+						"name": "Color",
+						"enumBody": [
+							{
+								"propertyName": "Red",
+								"enumValue": {
+									"type": "NumericLiteral",
+									"value": 1
+								}
+							},
+							{
+								"propertyName": "Green",
+								"enumValue": {
+									"type": "NumericLiteral",
+									"value": 2
+								}
+							},
+							{
+								"propertyName": "Blue",
+								"enumValue": {
+									"type": "NumericLiteral",
+									"value": 4
+								}
+							}
+						]
+					},
+					{
+						"type": "VariableStatement",
+						"declarations": [
+							{
+								"type": "SimpleVariableDeclaration",
+								"name": "c",
+								"value": {
+									"type": "PropertyAccess",
+									"base": {
+										"type": "Variable",
+										"name": "Color"
+									},
+									"name": "Green"
+								},
+								"typeAnnotations": [
+									{
+										"type": "TypeReference",
+										"typeName": {
+											"name": "Color",
+											"moduleNames": []
+										},
+										"typeArguments": []
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"source": "http://www.typescriptlang.org/Handbook Basic Types Enum",
+			"code": "enum Color {Red = 1, Green, Blue}; var colorName: string = Color[2]; alert(colorName);",
+			"result": {
+				"type": "Program",
+				"elements": [
+					{
+						"type": "EnumDeclaration",
+						"name": "Color",
+						"enumBody": [
+							{
+								"propertyName": "Red",
+								"enumValue": {
+									"type": "NumericLiteral",
+									"value": 1
+								}
+							},
+							{
+								"propertyName": "Green",
+								"enumValue": null
+							},
+							{
+								"propertyName": "Blue",
+								"enumValue": null
+							}
+						]
+					},
+					{
+						"type": "VariableStatement",
+						"declarations": [
+							{
+								"type": "SimpleVariableDeclaration",
+								"name": "colorName",
+								"value": {
+									"type": "PropertyAccess",
+									"base": {
+										"type": "Variable",
+										"name": "Color"
+									},
+									"name": {
+										"type": "NumericLiteral",
+										"value": 2
+									}
+								},
+								"typeAnnotations": [
+									{
+										"type": "PredefinedType",
+										"predefined": "string"
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "FunctionCall",
+						"name": {
+							"type": "Variable",
+							"name": "alert"
+						},
+						"arguments": [
+							{
+								"type": "Variable",
+								"name": "colorName"
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"source": "http://www.typescriptlang.org/Handbook Basic Types Any",
+			"code": "var notSure: any = 4; notSure = \"maybe a string instead\"; notSure = false; // okay, definitely a boolean",
+			"result": {
+				"type": "Program",
+				"elements": [
+					{
+						"type": "VariableStatement",
+						"declarations": [
+							{
+								"type": "SimpleVariableDeclaration",
+								"name": "notSure",
+								"value": {
+									"type": "NumericLiteral",
+									"value": 4
+								},
+								"typeAnnotations": [
+									{
+										"type": "PredefinedType",
+										"predefined": "any"
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "AssignmentExpression",
+						"operator": "=",
+						"left": {
+							"type": "Variable",
+							"name": "notSure"
+						},
+						"right": {
+							"type": "StringLiteral",
+							"value": "maybe a string instead"
+						}
+					},
+					{
+						"type": "AssignmentExpression",
+						"operator": "=",
+						"left": {
+							"type": "Variable",
+							"name": "notSure"
+						},
+						"right": {
+							"type": "BooleanLiteral",
+							"value": false
+						}
+					}
+				]
+			}
+		},
+		{
+			"source": "http://www.typescriptlang.org/Handbook Basic Types Any",
+			"code": "var list:any[] = [1, true, \"free\"]; list[1] = 100;",
+			"result": {
+				"type": "Program",
+				"elements": [
+					{
+						"type": "VariableStatement",
+						"declarations": [
+							{
+								"type": "SimpleVariableDeclaration",
+								"name": "list",
+								"value": {
+									"type": "ArrayLiteral",
+									"elements": [
+										{
+											"type": "NumericLiteral",
+											"value": 1
+										},
+										{
+											"type": "BooleanLiteral",
+											"value": true
+										},
+										{
+											"type": "StringLiteral",
+											"value": "free"
+										}
+									]
+								},
+								"typeAnnotations": [
+									{
+										"type": "PredefinedType",
+										"predefined": "any"
+									},
+									{
+										"type": "ArrayType"
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "AssignmentExpression",
+						"operator": "=",
+						"left": {
+							"type": "PropertyAccess",
+							"base": {
+								"type": "Variable",
+								"name": "list"
+							},
+							"name": {
+								"type": "NumericLiteral",
+								"value": 1
+							}
+						},
+						"right": {
+							"type": "NumericLiteral",
+							"value": 100
+						}
+					}
+				]
+			}
+		}
+	]
+}

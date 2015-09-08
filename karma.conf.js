@@ -21,7 +21,7 @@ module.exports = function (config) {
         served: true,
         included: false
       }, {
-        pattern: './specs/data/data.json',
+        pattern: './specs/data/*.json',
         watched: true,
         served: true,
         included: false
