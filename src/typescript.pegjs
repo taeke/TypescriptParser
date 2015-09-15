@@ -1550,16 +1550,38 @@ SourceElement
 /* ===== TypeScript A.1 Types ===== */
 
 TypeParameters
-  = "NO MATCH JUST A PLACEHOLDER"
+  = "<" typeParameterList:TypeParameterList ">" {
+  return {
+    type: "TypeParameters",
+    typeParameterList: typeParameterList
+  }
+}
 
 TypeParameterList
-  = "NO MATCH JUST A PLACEHOLDER"
+  = head:TypeParameter tail:(__ "," __ TypeParameter)* {
+      var result = head;
+      for (var i = 0; i < tail.length; i++) {
+        result.push(tail[i][3]);
+      }
+      return result;
+    }
   
 TypeParameter
-  = "NO MATCH JUST A PLACEHOLDER"
+  = name:Identifier __ constraint:Constraint {
+  return {
+    type: "TypeParameter",
+    name: name,
+    constraint: constraint
+  }
+}
 
 Constraint
-  = "NO MATCH JUST A PLACEHOLDER"
+  = ExtendsToken typeAnnotation:Type {
+  return {
+    type: "Constraint",
+    typeAnnotation: typeAnnotation
+  }
+}
 
 TypeArguments
   = "<" typeArgumentList:TypeArgumentList ">" {

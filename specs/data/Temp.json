@@ -1,8 +1,8 @@
 {
 	"items": [
 		{
-			"source": "http://www.typescriptlang.org/Handbook Basic Types Boolean",
-			"code": "var isDone: boolean = false;",
+			"source": "http://www.typescriptlang.org/Handbook",
+			"code": "",
 			"result": {
 				"type": "Program",
 				"elements": [
