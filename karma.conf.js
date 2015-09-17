@@ -16,7 +16,7 @@ module.exports = function (config) {
     // list of files / patterns to load in the browser
     files: [
       'specs/js/**/*Spec.js', {
-        pattern: './src/typescript.pegjs',
+        pattern: './dist/typescript.pegjs',
         watched: true,
         served: true,
         included: false

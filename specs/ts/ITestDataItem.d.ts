@@ -1,4 +1,4 @@
-/// <reference path='./../../src/ITypeScriptParse.d.ts' />
+/// <reference path='./../../src/interfaces/ITypeScriptParse.d.ts' />
 
 interface ITestDataItem {
 	source: string; // What source is this piece of code from.

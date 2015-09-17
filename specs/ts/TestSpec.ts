@@ -1,5 +1,6 @@
 /// <reference path='./../../typings/tsd.d.ts' />
 /// <reference path='./ITestData.d.ts' />
+'use strict';
 
 var typestring = require('./Typestring');
 var pegjs = require('pegjs');
@@ -47,7 +48,7 @@ describe('typescript parse', () => {
 		testData.items.forEach((test: ITestDataItem) => {
 			it('should parse typesccript', () => {
 				// arrange
-				jasmine.getFixtures().fixturesPath = './base/src/';
+				jasmine.getFixtures().fixturesPath = './base/dist/';
 				var grammer = readFixtures('typescript.pegjs');
 				var parser = pegjs.buildParser(grammer);
 		
@@ -66,7 +67,7 @@ describe('typescript parse', () => {
 		testData.items.forEach((test: ITestDataItem) => {
 			it('should parse typesccript', () => {
 				// arrange
-				jasmine.getFixtures().fixturesPath = './base/src/';
+				jasmine.getFixtures().fixturesPath = './base/dist/';
 				var grammer = readFixtures('typescript.pegjs');
 				var parser = pegjs.buildParser(grammer);
 		

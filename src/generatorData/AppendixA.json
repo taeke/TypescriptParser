@@ -1,0 +1,3688 @@
+[
+   {
+      "title": "A.1 Types",
+      "rules": [
+         {
+            "name": "TypeParameters",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "EnclosedPart",
+                        "bracketType": "<",
+                        "indentifier": {
+                           "name": "TypeParameterList",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeParameterList",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "TypeParameter",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ",",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "TypeParameterList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "TypeParameter",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeParameter",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "BindingIdentifier",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "Constraint",
+                                 "optional": true
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "Constraint",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "extends"
+                        ],
+                        "indentifier": {
+                           "name": "Type",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeArguments",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "EnclosedPart",
+                        "bracketType": "<",
+                        "indentifier": {
+                           "name": "TypeArgumentList",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeArgumentList",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "TypeArgument",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ",",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "TypeArgumentList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "TypeArgument",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeArgument",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "Type",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "Type",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "UnionOrIntersectionOrPrimaryType",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "FunctionType",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ConstructorType",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "UnionOrIntersectionOrPrimaryType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "UnionType",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "IntersectionOrPrimaryType",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "IntersectionOrPrimaryType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "IntersectionType",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "PrimaryType",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "PrimaryType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ParenthesizedType",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "PredefinedType",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "TypeReference",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ObjectType",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ArrayType",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "TupleType",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "TypeQuery",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ParenthesizedType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "EnclosedPart",
+                        "bracketType": "(",
+                        "indentifier": {
+                           "name": "Type",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "PredefinedType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenPart",
+                        "token": "any"
+                     },
+                     {
+                        "type": "TokenPart",
+                        "token": "number"
+                     },
+                     {
+                        "type": "TokenPart",
+                        "token": "boolean"
+                     },
+                     {
+                        "type": "TokenPart",
+                        "token": "string"
+                     },
+                     {
+                        "type": "TokenPart",
+                        "token": "symbol"
+                     },
+                     {
+                        "type": "TokenPart",
+                        "token": "void"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeReference",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "TypeName   [no LineTerminator here]   TypeArgumentsopt"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeName",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "IdentifierReference",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ".",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "NamespaceName",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "IdentifierReference",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "NamespaceName",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "IdentifierReference",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ".",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "NamespaceName",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "IdentifierReference",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ObjectType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "EnclosedPart",
+                        "bracketType": "{",
+                        "indentifier": {
+                           "name": "TypeBody",
+                           "optional": true
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeBody",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "TypeMemberList   ;opt"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeMemberList",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "TypeMember",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ";",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "TypeMemberList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "TypeMember",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ",",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "TypeMemberList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "TypeMember",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeMember",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "PropertySignature",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "CallSignature",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ConstructSignature",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "IndexSignature",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "MethodSignature",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ArrayType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "PrimaryType   [no LineTerminator here]   [   ]"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TupleType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "EnclosedPart",
+                        "bracketType": "[",
+                        "indentifier": {
+                           "name": "TupleElementTypes",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TupleElementTypes",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "TupleElementType",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ",",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "TupleElementTypes",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "TupleElementType",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TupleElementType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "Type",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "UnionType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SeparatorPart",
+                        "separator": "|",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "UnionOrIntersectionOrPrimaryType",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "IntersectionOrPrimaryType",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "IntersectionType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SeparatorPart",
+                        "separator": "&",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "IntersectionOrPrimaryType",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "PrimaryType",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "FunctionType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "TypeParametersopt   (   ParameterListopt   )   =>   Type"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ConstructorType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "new   TypeParametersopt   (   ParameterListopt   )   =>   Type"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeQuery",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "typeof"
+                        ],
+                        "indentifier": {
+                           "name": "TypeQueryExpression",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeQueryExpression",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "IdentifierReference",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ".",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "TypeQueryExpression",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "IdentifierName",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "PropertySignature",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "PropertyName   ?opt   TypeAnnotationopt"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "PropertyName",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "IdentifierName",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "StringLiteral",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "NumericLiteral",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeAnnotation",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": ":   Type"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "CallSignature",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "TypeParametersopt   (   ParameterListopt   )   TypeAnnotationopt"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ParameterList",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "RequiredParameterList",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "OptionalParameterList",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "RestParameter",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ",",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "RequiredParameterList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "OptionalParameterList",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ",",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "RequiredParameterList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "RestParameter",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ",",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "OptionalParameterList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "RestParameter",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ",",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "RequiredParameterList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "OptionalParameterList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "RestParameter",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "RequiredParameterList",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "RequiredParameter",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ",",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "RequiredParameterList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "RequiredParameter",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "RequiredParameter",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "AccessibilityModifier",
+                                 "optional": true
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "BindingIdentifierOrPattern",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "TypeAnnotation",
+                                 "optional": true
+                              }
+                           }
+                        ]
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ":",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "BindingIdentifier",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "StringLiteral",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AccessibilityModifier",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenPart",
+                        "token": "public"
+                     },
+                     {
+                        "type": "TokenPart",
+                        "token": "private"
+                     },
+                     {
+                        "type": "TokenPart",
+                        "token": "protected"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "BindingIdentifierOrPattern",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "BindingIdentifier",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "BindingPattern",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "OptionalParameterList",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "OptionalParameter",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ",",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "OptionalParameterList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "OptionalParameter",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "OptionalParameter",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": [
+                           "AccessibilityModifieropt   BindingIdentifierOrPattern   ?   TypeAnnotationopt",
+                           "AccessibilityModifieropt   BindingIdentifierOrPattern   TypeAnnotationopt   Initializer",
+                           "BindingIdentifier   ?   :   StringLiteral"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "RestParameter",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "...   BindingIdentifier   TypeAnnotationopt"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ConstructSignature",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "new   TypeParametersopt   (   ParameterListopt   )   TypeAnnotationopt"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "IndexSignature",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": [
+                           "[   BindingIdentifier   :   string   ]   TypeAnnotation",
+                           "[   BindingIdentifier   :   number   ]   TypeAnnotation"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "MethodSignature",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "PropertyName   ?opt   CallSignature"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "TypeAliasDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "type   BindingIdentifier   TypeParametersopt   =   Type   ;"
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "title": "A.2 Expressions",
+      "rules": [
+         {
+            "name": "PropertyDefinition",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "IdentifierReference",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "CoverInitializedName",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ":",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "PropertyName",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "AssignmentExpression",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     },
+                     {
+                        "type": "FixedPart",
+                        "fixed": "PropertyName   CallSignature   {   FunctionBody   }"
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "GetAccessor",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "SetAccessor",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "GetAccessor",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "get   PropertyName   (   )   TypeAnnotationopt   {   FunctionBody   }"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "SetAccessor",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "set   PropertyName   (   BindingIdentifierOrPattern   TypeAnnotationopt   )   {   FunctionBody   }"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "FunctionExpression",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "function   BindingIdentifieropt   CallSignature   {   FunctionBody   }"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ArrowFormalParameters",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "CallSignature",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "Arguments",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": [
+                           "TypeArgumentsopt   (   ArgumentListopt   )",
+                           "UnaryExpression:  ( Modified )",
+                           "…",
+                           "<   Type   >   UnaryExpression"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "title": "A.3 Statements",
+      "rules": [
+         {
+            "name": "Declaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenPart",
+                        "token": "…"
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "InterfaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "TypeAliasDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "EnumDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "VariableDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "SimpleVariableDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "DestructuringVariableDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "SimpleVariableDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "BindingIdentifier",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "TypeAnnotation",
+                                 "optional": true
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "Initializer",
+                                 "optional": true
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "DestructuringVariableDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "BindingPattern",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "TypeAnnotation",
+                                 "optional": true
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "Initializer",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "LexicalBinding",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "SimpleLexicalBinding",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "DestructuringLexicalBinding",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "SimpleLexicalBinding",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "BindingIdentifier",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "TypeAnnotation",
+                                 "optional": true
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "Initializer",
+                                 "optional": true
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "DestructuringLexicalBinding",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "BindingPattern",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "TypeAnnotation",
+                                 "optional": true
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "Initializer",
+                                 "optional": true
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "title": "A.4 Functions",
+      "rules": [
+         {
+            "name": "FunctionDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "function   BindingIdentifieropt   CallSignature   {   FunctionBody   }"
+                     },
+                     {
+                        "type": "FixedPart",
+                        "fixed": "function   BindingIdentifieropt   CallSignature   ;"
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "title": "A.5 Interfaces",
+      "rules": [
+         {
+            "name": "InterfaceDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "interface   BindingIdentifier   TypeParametersopt   InterfaceExtendsClauseopt   ObjectType"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "InterfaceExtendsClause",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "extends"
+                        ],
+                        "indentifier": {
+                           "name": "ClassOrInterfaceTypeList",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ClassOrInterfaceTypeList",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ClassOrInterfaceType",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ",",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "ClassOrInterfaceTypeList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "ClassOrInterfaceType",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ClassOrInterfaceType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "TypeReference",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "title": "A.6 Classes",
+      "rules": [
+         {
+            "name": "ClassDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "class   BindingIdentifieropt   TypeParametersopt   ClassHeritage   {   ClassBody   }"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ClassHeritage",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "ClassExtendsClause",
+                                 "optional": true
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "ImplementsClause",
+                                 "optional": true
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ClassExtendsClause",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "extends"
+                        ],
+                        "indentifier": {
+                           "name": "ClassType",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ClassType",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "TypeReference",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ImplementsClause",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "implements"
+                        ],
+                        "indentifier": {
+                           "name": "ClassOrInterfaceTypeList",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ClassElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ConstructorDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "PropertyMemberDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "IndexMemberDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ConstructorDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": [
+                           "AccessibilityModifieropt   constructor   (   ParameterListopt   )   {   FunctionBody   }",
+                           "AccessibilityModifieropt   constructor   (   ParameterListopt   )   ;"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "PropertyMemberDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "MemberVariableDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "MemberFunctionDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "MemberAccessorDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "MemberVariableDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "AccessibilityModifieropt   staticopt   PropertyName   TypeAnnotationopt   Initializeropt   ;"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "MemberFunctionDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": [
+                           "AccessibilityModifieropt   staticopt   PropertyName   CallSignature   {   FunctionBody   }",
+                           "AccessibilityModifieropt   staticopt   PropertyName   CallSignature   ;"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "MemberAccessorDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": [
+                           "AccessibilityModifieropt   staticopt   GetAccessor",
+                           "AccessibilityModifieropt   staticopt   SetAccessor"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "IndexMemberDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "IndexSignature   ;"
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "title": "A.7 Enums",
+      "rules": [
+         {
+            "name": "EnumDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "constopt   enum   BindingIdentifier   {   EnumBodyopt   }"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "EnumBody",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "EnumMemberList   ,opt"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "EnumMemberList",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "EnumMember",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ",",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "EnumMemberList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "EnumMember",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "EnumMember",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "PropertyName",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": "=",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "PropertyName",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "EnumValue",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "EnumValue",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "AssignmentExpression",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "title": "A.8 Namespaces",
+      "rules": [
+         {
+            "name": "NamespaceDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "namespace   IdentifierPath   {   NamespaceBody   }"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "IdentifierPath",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "BindingIdentifier",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ".",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "IdentifierPath",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "BindingIdentifier",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "NamespaceBody",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "NamespaceElements",
+                           "optional": true
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "NamespaceElements",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "NamespaceElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "NamespaceElements",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "NamespaceElement",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "NamespaceElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "Statement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "LexicalDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "FunctionDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "GeneratorDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ClassDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "InterfaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "TypeAliasDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "EnumDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "NamespaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "AmbientDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImportAliasDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ExportNamespaceElement",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ExportNamespaceElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "VariableStatement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "LexicalDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "FunctionDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "GeneratorDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "ClassDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "InterfaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "TypeAliasDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "EnumDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "NamespaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "ImportAliasDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ImportAliasDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "import   BindingIdentifier   =   EntityName   ;"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "EntityName",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "NamespaceName",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ".",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "NamespaceName",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "IdentifierReference",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "title": "A.9 Scripts and Modules",
+      "rules": [
+         {
+            "name": "SourceFile",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImplementationSourceFile",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "DeclarationSourceFile",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ImplementationSourceFile",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImplementationScript",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImplementationModule",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "DeclarationSourceFile",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "DeclarationScript",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "DeclarationModule",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ImplementationScript",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImplementationScriptElements",
+                           "optional": true
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ImplementationScriptElements",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImplementationScriptElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "ImplementationScriptElements",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "ImplementationScriptElement",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ImplementationScriptElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImplementationElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "AmbientModuleDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ImplementationElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "Statement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "LexicalDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "FunctionDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "GeneratorDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ClassDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "InterfaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "TypeAliasDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "EnumDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "NamespaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "AmbientDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImportAliasDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "DeclarationScript",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "DeclarationScriptElements",
+                           "optional": true
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "DeclarationScriptElements",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "DeclarationScriptElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "DeclarationScriptElements",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "DeclarationScriptElement",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "DeclarationScriptElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "DeclarationElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "AmbientModuleDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "DeclarationElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "InterfaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "TypeAliasDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "NamespaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "AmbientDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImportAliasDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ImplementationModule",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImplementationModuleElements",
+                           "optional": true
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ImplementationModuleElements",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImplementationModuleElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "ImplementationModuleElements",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "ImplementationModuleElement",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ImplementationModuleElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImplementationElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImportDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImportAliasDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImportRequireDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ExportImplementationElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ExportDefaultImplementationElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ExportListDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ExportAssignment",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "DeclarationModule",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "DeclarationModuleElements",
+                           "optional": true
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "DeclarationModuleElements",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "DeclarationModuleElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "DeclarationModuleElements",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "DeclarationModuleElement",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "DeclarationModuleElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "DeclarationElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImportDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ImportAliasDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ExportDeclarationElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ExportDefaultDeclarationElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ExportListDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "ExportAssignment",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ImportRequireDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "import   BindingIdentifier   =   require   (   StringLiteral   )   ;"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ExportImplementationElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "VariableStatement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "LexicalDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "FunctionDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "GeneratorDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "ClassDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "InterfaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "TypeAliasDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "EnumDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "NamespaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "ImportAliasDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ExportDeclarationElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "InterfaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "TypeAliasDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export"
+                        ],
+                        "indentifier": {
+                           "name": "ImportAliasDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ExportDefaultImplementationElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export",
+                           "default"
+                        ],
+                        "indentifier": {
+                           "name": "FunctionDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export",
+                           "default"
+                        ],
+                        "indentifier": {
+                           "name": "GeneratorDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export",
+                           "default"
+                        ],
+                        "indentifier": {
+                           "name": "ClassDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "FixedPart",
+                        "fixed": "export   default   AssignmentExpression   ;"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ExportDefaultDeclarationElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export",
+                           "default"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientFunctionDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export",
+                           "default"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientClassDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "FixedPart",
+                        "fixed": "export   default   IdentifierReference   ;"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ExportListDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": [
+                           "export   *   FromClause   ;",
+                           "export   ExportClause   FromClause   ;",
+                           "export   ExportClause   ;"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "ExportAssignment",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "export   =   IdentifierReference   ;"
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "title": "A.1,0 Ambients",
+      "rules": [
+         {
+            "name": "AmbientDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "declare"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientVariableDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "declare"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientFunctionDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "declare"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientClassDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "declare"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientEnumDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "declare"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientNamespaceDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientVariableDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": [
+                           "var   AmbientBindingList   ;",
+                           "let   AmbientBindingList   ;",
+                           "const   AmbientBindingList   ;"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientBindingList",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "AmbientBinding",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SeparatorPart",
+                        "separator": ",",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "AmbientBindingList",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "AmbientBinding",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientBinding",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "BindingIdentifier",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "TypeAnnotation",
+                                 "optional": true
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientFunctionDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "function   BindingIdentifier   CallSignature   ;"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientClassDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "class   BindingIdentifier   TypeParametersopt   ClassHeritage   {   AmbientClassBody   }"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientClassBody",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "AmbientClassBodyElements",
+                           "optional": true
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientClassBodyElements",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "AmbientClassBodyElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "AmbientClassBodyElements",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "AmbientClassBodyElement",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientClassBodyElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "AmbientConstructorDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "AmbientPropertyMemberDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "IndexSignature",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientConstructorDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "constructor   (   ParameterListopt   )   ;"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientPropertyMemberDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": [
+                           "AccessibilityModifieropt   staticopt   PropertyName   TypeAnnotationopt   ;",
+                           "AccessibilityModifieropt   staticopt   PropertyName   CallSignature   ;"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientEnumDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "EnumDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientNamespaceDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "namespace   IdentifierPath   {   AmbientNamespaceBody   }"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientNamespaceBody",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "AmbientNamespaceElements",
+                           "optional": true
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientNamespaceElements",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "SinglePart",
+                        "indentifier": {
+                           "name": "AmbientNamespaceElement",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "MultipleIndentifierPart",
+                        "indentifiers": [
+                           {
+                              "indentifier": {
+                                 "name": "AmbientNamespaceElements",
+                                 "optional": false
+                              }
+                           },
+                           {
+                              "indentifier": {
+                                 "name": "AmbientNamespaceElement",
+                                 "optional": false
+                              }
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientNamespaceElement",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export",
+                           "opt"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientVariableDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export",
+                           "opt"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientLexicalDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export",
+                           "opt"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientFunctionDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export",
+                           "opt"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientClassDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export",
+                           "opt"
+                        ],
+                        "indentifier": {
+                           "name": "InterfaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export",
+                           "opt"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientEnumDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export",
+                           "opt"
+                        ],
+                        "indentifier": {
+                           "name": "AmbientNamespaceDeclaration",
+                           "optional": false
+                        }
+                     },
+                     {
+                        "type": "TokenIdentifierPart",
+                        "tokens": [
+                           "export",
+                           "opt"
+                        ],
+                        "indentifier": {
+                           "name": "ImportAliasDeclaration",
+                           "optional": false
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "name": "AmbientModuleDeclaration",
+            "lines": [
+               {
+                  "parts": [
+                     {
+                        "type": "FixedPart",
+                        "fixed": "declare   module   StringLiteral   {    DeclarationModule   }"
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+]

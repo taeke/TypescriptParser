@@ -1,4 +1,6 @@
 /// <reference path='./../../typings/tsd.d.ts' />
+'use strict';
+
 import * as typescript from 'typescript';
 var ts: any = require('typescript');
 
