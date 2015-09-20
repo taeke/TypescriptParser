@@ -1,5 +1,5 @@
 /// <reference path='./../../typings/tsd.d.ts' />
-/// <reference path='./ITestData.d.ts' />
+/// <reference path='./../interfaces/ITestData.d.ts' />
 'use strict';
 
 var typestring = require('./Typestring');

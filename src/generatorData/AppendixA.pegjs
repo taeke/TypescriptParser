@@ -164,7 +164,7 @@ SeparatorHelper
 
 ChapterHelper
   = ChapterStart num:Num+ Space+ head:ChapterTitleWord tail:(ChapterTitleWord)* LineEnding? {
-    return "A." + num + " " + (tail ? [head].concat(tail).join(" ") : head)
+    return "A." + num.join("") + " " + (tail ? [head].concat(tail).join(" ") : head)
 }
 
 /*** Words *****************************************************/
