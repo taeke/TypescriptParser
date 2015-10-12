@@ -7,7 +7,7 @@ interface IPart {
     indentifiers?: IIndentifier[];
     bracketType?: string;
     separator?: string;
-    tokens: string[];
-    token: string;
-    fixed: string;
+    tokens?: string[];
+    token?: string;
+    fixed?: string;
 }

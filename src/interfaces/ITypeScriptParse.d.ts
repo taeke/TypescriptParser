@@ -3,7 +3,6 @@ interface ITypeScriptParseBase {
 }
 
 interface ITypeScriptElement {
-	
 } 
 
 interface ITypeScriptParse extends ITypeScriptParseBase {

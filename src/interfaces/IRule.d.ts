@@ -3,4 +3,5 @@
 interface IRule {
 	name: string;
 	lines: ILine[];
+	modified: boolean;
 }

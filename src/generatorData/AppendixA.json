@@ -17,7 +17,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeParameterList",
@@ -36,10 +37,8 @@
                         "separator": ",",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "TypeParameterList",
-                                 "optional": false
-                              }
+                              "name": "TypeParameterList",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -51,7 +50,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeParameter",
@@ -62,10 +62,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "BindingIdentifier",
-                                 "optional": false
-                              }
+                              "name": "BindingIdentifier",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -77,7 +75,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "Constraint",
@@ -96,7 +95,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeArguments",
@@ -113,7 +113,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeArgumentList",
@@ -132,10 +133,8 @@
                         "separator": ",",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "TypeArgumentList",
-                                 "optional": false
-                              }
+                              "name": "TypeArgumentList",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -147,7 +146,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeArgument",
@@ -163,7 +163,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "Type",
@@ -193,7 +194,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "UnionOrIntersectionOrPrimaryType",
@@ -216,7 +218,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "IntersectionOrPrimaryType",
@@ -239,7 +242,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "PrimaryType",
@@ -297,7 +301,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ParenthesizedType",
@@ -314,7 +319,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "PredefinedType",
@@ -347,7 +353,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeReference",
@@ -360,7 +367,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeName",
@@ -379,10 +387,8 @@
                         "separator": ".",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "NamespaceName",
-                                 "optional": false
-                              }
+                              "name": "NamespaceName",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -394,7 +400,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "NamespaceName",
@@ -413,10 +420,8 @@
                         "separator": ".",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "NamespaceName",
-                                 "optional": false
-                              }
+                              "name": "NamespaceName",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -428,7 +433,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ObjectType",
@@ -445,7 +451,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeBody",
@@ -454,11 +461,12 @@
                   "parts": [
                      {
                         "type": "FixedPart",
-                        "fixed": "TypeMemberList   ;opt"
+                        "fixed": "TypeMemberList   ;optTypeMemberList   ,opt"
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeMemberList",
@@ -477,10 +485,8 @@
                         "separator": ";",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "TypeMemberList",
-                                 "optional": false
-                              }
+                              "name": "TypeMemberList",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -495,10 +501,8 @@
                         "separator": ",",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "TypeMemberList",
-                                 "optional": false
-                              }
+                              "name": "TypeMemberList",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -510,7 +514,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeMember",
@@ -554,7 +559,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ArrayType",
@@ -567,7 +573,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TupleType",
@@ -584,7 +591,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TupleElementTypes",
@@ -603,10 +611,8 @@
                         "separator": ",",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "TupleElementTypes",
-                                 "optional": false
-                              }
+                              "name": "TupleElementTypes",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -618,7 +624,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TupleElementType",
@@ -634,7 +641,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "UnionType",
@@ -646,10 +654,8 @@
                         "separator": "|",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "UnionOrIntersectionOrPrimaryType",
-                                 "optional": false
-                              }
+                              "name": "UnionOrIntersectionOrPrimaryType",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -661,7 +667,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "IntersectionType",
@@ -673,10 +680,8 @@
                         "separator": "&",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "IntersectionOrPrimaryType",
-                                 "optional": false
-                              }
+                              "name": "IntersectionOrPrimaryType",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -688,7 +693,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "FunctionType",
@@ -701,7 +707,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ConstructorType",
@@ -714,7 +721,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeQuery",
@@ -733,7 +741,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeQueryExpression",
@@ -752,10 +761,8 @@
                         "separator": ".",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "TypeQueryExpression",
-                                 "optional": false
-                              }
+                              "name": "TypeQueryExpression",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -767,7 +774,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "PropertySignature",
@@ -780,7 +788,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "PropertyName",
@@ -810,7 +819,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeAnnotation",
@@ -823,7 +833,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "CallSignature",
@@ -836,7 +847,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ParameterList",
@@ -869,10 +881,8 @@
                         "separator": ",",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "RequiredParameterList",
-                                 "optional": false
-                              }
+                              "name": "RequiredParameterList",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -887,10 +897,8 @@
                         "separator": ",",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "RequiredParameterList",
-                                 "optional": false
-                              }
+                              "name": "RequiredParameterList",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -905,10 +913,8 @@
                         "separator": ",",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "OptionalParameterList",
-                                 "optional": false
-                              }
+                              "name": "OptionalParameterList",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -923,10 +929,8 @@
                         "separator": ",",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "RequiredParameterList",
-                                 "optional": false
-                              }
+                              "name": "RequiredParameterList",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -944,7 +948,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "RequiredParameterList",
@@ -963,10 +968,8 @@
                         "separator": ",",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "RequiredParameterList",
-                                 "optional": false
-                              }
+                              "name": "RequiredParameterList",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -978,7 +981,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "RequiredParameter",
@@ -989,10 +993,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "AccessibilityModifier",
-                                 "optional": true
-                              }
+                              "name": "AccessibilityModifier",
+                              "optional": true
                            },
                            {
                               "indentifier": {
@@ -1013,10 +1015,8 @@
                         "separator": ":",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "BindingIdentifier",
-                                 "optional": false
-                              }
+                              "name": "BindingIdentifier",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -1028,7 +1028,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AccessibilityModifier",
@@ -1049,7 +1050,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "BindingIdentifierOrPattern",
@@ -1072,7 +1074,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "OptionalParameterList",
@@ -1091,10 +1094,8 @@
                         "separator": ",",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "OptionalParameterList",
-                                 "optional": false
-                              }
+                              "name": "OptionalParameterList",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -1106,7 +1107,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "OptionalParameter",
@@ -1123,7 +1125,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "RestParameter",
@@ -1136,7 +1139,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ConstructSignature",
@@ -1149,7 +1153,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "IndexSignature",
@@ -1165,7 +1170,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "MethodSignature",
@@ -1178,7 +1184,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "TypeAliasDeclaration",
@@ -1191,7 +1198,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          }
       ]
    },
@@ -1222,10 +1230,8 @@
                         "separator": ":",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "PropertyName",
-                                 "optional": false
-                              }
+                              "name": "PropertyName",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -1255,7 +1261,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": true
          },
          {
             "name": "GetAccessor",
@@ -1268,7 +1275,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "SetAccessor",
@@ -1281,7 +1289,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "FunctionExpression",
@@ -1294,7 +1303,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": true
          },
          {
             "name": "ArrowFormalParameters",
@@ -1310,7 +1320,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": true
          },
          {
             "name": "Arguments",
@@ -1328,7 +1339,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": true
          }
       ]
    },
@@ -1367,7 +1379,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": true
          },
          {
             "name": "VariableDeclaration",
@@ -1390,7 +1403,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": true
          },
          {
             "name": "SimpleVariableDeclaration",
@@ -1401,10 +1415,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "BindingIdentifier",
-                                 "optional": false
-                              }
+                              "name": "BindingIdentifier",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -1422,7 +1434,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "DestructuringVariableDeclaration",
@@ -1433,10 +1446,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "BindingPattern",
-                                 "optional": false
-                              }
+                              "name": "BindingPattern",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -1454,7 +1465,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "LexicalBinding",
@@ -1477,7 +1489,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": true
          },
          {
             "name": "SimpleLexicalBinding",
@@ -1488,10 +1501,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "BindingIdentifier",
-                                 "optional": false
-                              }
+                              "name": "BindingIdentifier",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -1509,7 +1520,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "DestructuringLexicalBinding",
@@ -1520,10 +1532,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "BindingPattern",
-                                 "optional": false
-                              }
+                              "name": "BindingPattern",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -1541,7 +1551,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          }
       ]
    },
@@ -1563,7 +1574,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": true
          }
       ]
    },
@@ -1581,7 +1593,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "InterfaceExtendsClause",
@@ -1600,7 +1613,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ClassOrInterfaceTypeList",
@@ -1619,10 +1633,8 @@
                         "separator": ",",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "ClassOrInterfaceTypeList",
-                                 "optional": false
-                              }
+                              "name": "ClassOrInterfaceTypeList",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -1634,7 +1646,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ClassOrInterfaceType",
@@ -1650,7 +1663,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          }
       ]
    },
@@ -1668,7 +1682,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": true
          },
          {
             "name": "ClassHeritage",
@@ -1679,10 +1694,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "ClassExtendsClause",
-                                 "optional": true
-                              }
+                              "name": "ClassExtendsClause",
+                              "optional": true
                            },
                            {
                               "indentifier": {
@@ -1694,7 +1707,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": true
          },
          {
             "name": "ClassExtendsClause",
@@ -1713,7 +1727,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ClassType",
@@ -1729,7 +1744,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ImplementsClause",
@@ -1748,7 +1764,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ClassElement",
@@ -1778,7 +1795,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": true
          },
          {
             "name": "ConstructorDeclaration",
@@ -1794,7 +1812,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "PropertyMemberDeclaration",
@@ -1824,7 +1843,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "MemberVariableDeclaration",
@@ -1837,7 +1857,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "MemberFunctionDeclaration",
@@ -1853,7 +1874,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "MemberAccessorDeclaration",
@@ -1869,7 +1891,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "IndexMemberDeclaration",
@@ -1882,7 +1905,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          }
       ]
    },
@@ -1900,7 +1924,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "EnumBody",
@@ -1913,7 +1938,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "EnumMemberList",
@@ -1932,10 +1958,8 @@
                         "separator": ",",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "EnumMemberList",
-                                 "optional": false
-                              }
+                              "name": "EnumMemberList",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -1947,7 +1971,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "EnumMember",
@@ -1966,10 +1991,8 @@
                         "separator": "=",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "PropertyName",
-                                 "optional": false
-                              }
+                              "name": "PropertyName",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -1981,7 +2004,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "EnumValue",
@@ -1997,7 +2021,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          }
       ]
    },
@@ -2015,7 +2040,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "IdentifierPath",
@@ -2034,10 +2060,8 @@
                         "separator": ".",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "IdentifierPath",
-                                 "optional": false
-                              }
+                              "name": "IdentifierPath",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -2049,7 +2073,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "NamespaceBody",
@@ -2065,7 +2090,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "NamespaceElements",
@@ -2083,10 +2109,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "NamespaceElements",
-                                 "optional": false
-                              }
+                              "name": "NamespaceElements",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -2098,7 +2122,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "NamespaceElement",
@@ -2191,7 +2216,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ExportNamespaceElement",
@@ -2310,7 +2336,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ImportAliasDeclaration",
@@ -2323,7 +2350,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "EntityName",
@@ -2342,10 +2370,8 @@
                         "separator": ".",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "NamespaceName",
-                                 "optional": false
-                              }
+                              "name": "NamespaceName",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -2357,7 +2383,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          }
       ]
    },
@@ -2385,7 +2412,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ImplementationSourceFile",
@@ -2408,7 +2436,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "DeclarationSourceFile",
@@ -2431,7 +2460,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ImplementationScript",
@@ -2447,7 +2477,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ImplementationScriptElements",
@@ -2465,10 +2496,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "ImplementationScriptElements",
-                                 "optional": false
-                              }
+                              "name": "ImplementationScriptElements",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -2480,7 +2509,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ImplementationScriptElement",
@@ -2503,7 +2533,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ImplementationElement",
@@ -2589,7 +2620,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "DeclarationScript",
@@ -2605,7 +2637,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "DeclarationScriptElements",
@@ -2623,10 +2656,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "DeclarationScriptElements",
-                                 "optional": false
-                              }
+                              "name": "DeclarationScriptElements",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -2638,7 +2669,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "DeclarationScriptElement",
@@ -2661,7 +2693,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "DeclarationElement",
@@ -2705,7 +2738,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ImplementationModule",
@@ -2721,7 +2755,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ImplementationModuleElements",
@@ -2739,10 +2774,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "ImplementationModuleElements",
-                                 "optional": false
-                              }
+                              "name": "ImplementationModuleElements",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -2754,7 +2787,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ImplementationModuleElement",
@@ -2819,7 +2853,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "DeclarationModule",
@@ -2835,7 +2870,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "DeclarationModuleElements",
@@ -2853,10 +2889,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "DeclarationModuleElements",
-                                 "optional": false
-                              }
+                              "name": "DeclarationModuleElements",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -2868,7 +2902,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "DeclarationModuleElement",
@@ -2926,7 +2961,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ImportRequireDeclaration",
@@ -2939,7 +2975,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ExportImplementationElement",
@@ -3058,7 +3095,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ExportDeclarationElement",
@@ -3107,7 +3145,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ExportDefaultImplementationElement",
@@ -3153,7 +3192,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ExportDefaultDeclarationElement",
@@ -3188,7 +3228,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ExportListDeclaration",
@@ -3205,7 +3246,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "ExportAssignment",
@@ -3218,7 +3260,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          }
       ]
    },
@@ -3282,7 +3325,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientVariableDeclaration",
@@ -3299,7 +3343,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientBindingList",
@@ -3318,10 +3363,8 @@
                         "separator": ",",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "AmbientBindingList",
-                                 "optional": false
-                              }
+                              "name": "AmbientBindingList",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -3333,7 +3376,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientBinding",
@@ -3344,10 +3388,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "BindingIdentifier",
-                                 "optional": false
-                              }
+                              "name": "BindingIdentifier",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -3359,7 +3401,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientFunctionDeclaration",
@@ -3372,7 +3415,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientClassDeclaration",
@@ -3385,7 +3429,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientClassBody",
@@ -3401,7 +3446,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientClassBodyElements",
@@ -3419,10 +3465,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "AmbientClassBodyElements",
-                                 "optional": false
-                              }
+                              "name": "AmbientClassBodyElements",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -3434,7 +3478,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientClassBodyElement",
@@ -3464,7 +3509,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientConstructorDeclaration",
@@ -3477,7 +3523,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientPropertyMemberDeclaration",
@@ -3493,7 +3540,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientEnumDeclaration",
@@ -3509,7 +3557,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientNamespaceDeclaration",
@@ -3522,7 +3571,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientNamespaceBody",
@@ -3538,7 +3588,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientNamespaceElements",
@@ -3556,10 +3607,8 @@
                         "type": "MultipleIndentifierPart",
                         "indentifiers": [
                            {
-                              "indentifier": {
-                                 "name": "AmbientNamespaceElements",
-                                 "optional": false
-                              }
+                              "name": "AmbientNamespaceElements",
+                              "optional": false
                            },
                            {
                               "indentifier": {
@@ -3571,7 +3620,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientNamespaceElement",
@@ -3668,7 +3718,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          },
          {
             "name": "AmbientModuleDeclaration",
@@ -3681,7 +3732,8 @@
                      }
                   ]
                }
-            ]
+            ],
+            "modified": false
          }
       ]
    }

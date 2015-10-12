@@ -15,7 +15,8 @@ Rule
   = name:RuleName  modified:Modified? lines:Line* {
   return {
     name:name,
-    lines:lines
+    lines:lines,
+    modified:modified === null ? false : true 
   }
 }
 
@@ -72,7 +73,7 @@ MultipleIndentifierPart
   = head:Indentifier Space* tail:MultipleIndentifierHelper+ {
   return {
     type:"MultipleIndentifierPart",
-    indentifiers: [{indentifier:head}].concat(tail)
+    indentifiers: [head].concat(tail)
   }
 }
 
@@ -81,7 +82,7 @@ SeparatorPart
   return {
     type:"SeparatorPart",
     separator:separator,
-    indentifiers: [{indentifier:head}].concat(tail)
+    indentifiers: [head].concat(tail)
   }
 }
 
@@ -235,7 +236,7 @@ TypeAliasDeclaration
   = "type   BindingIdentifier   TypeParametersopt   =   Type   ;"
 
 Modified
-  = Space* "( Modified )" LineEnding?
+  = Space* "( Modified )" LineEnding? 
 
 PropertyDefinitionLine
   = "PropertyName   CallSignature   {   FunctionBody   }"

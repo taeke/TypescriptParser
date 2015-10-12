@@ -1,5 +1,5 @@
 {
-	"Version": "Version 1.6 august 2015",
-	"Start": "/* ===== Typescript specific rules based on the Typescript language definition of {0} start here. ===== */\n\n",
-	"Chapter":"/* ===== TypeScript 1.6 {0} ===== */\n\n"
+	"version": "Version 1.6 august 2015",
+	"start": "\n/* ===== Typescript specific rules based on the Typescript language definition of {0} start here. ===== */\n\n",
+	"chapter":"/* ===== TypeScript 1.6 {0} ===== */\n\n"
 }

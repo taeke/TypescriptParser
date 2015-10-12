@@ -10,4 +10,5 @@ AppendixA.txt is the original raw content of the appendix of the docx file.
 AppendixA.pegjs is the file for parsing this appendix.
 AppendixA.json is the result of parsing this appendix in de online pegjs parser.
 
-StringConsts.json is extra data for creating the pegjs file for typescript.   
+StringConsts.json is extra data for creating the pegjs file for typescript. 
+Header.pegjs is the header for the new typescript.pegjs   
