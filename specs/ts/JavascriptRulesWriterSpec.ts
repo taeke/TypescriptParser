@@ -217,7 +217,7 @@ VariableDeclarationNoIn
       javascriptRulesWriter.handleUnModified('VariableDeclaration');
       
       // assert
-      expect(javascriptRulesWriter.modified).toBe('/*VariableDeclaration\n');
+      expect(javascriptRulesWriter.modified).toBe('/* Redefined in typescript rules\nVariableDeclaration\n');
       expect(javascriptRulesWriter.javascriptWriterState).toBe(JavascriptWriterState.Modified)
     });
   });
