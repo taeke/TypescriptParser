@@ -8,15 +8,12 @@
 import * as events from "events";
 
 var StringHelper = require(' ./../../src/js/StringHelper');
-var NoMatchRuleWriter = require('./../../src/js/NoMatchRuleWriter');
 
 /**
  * Writes all the chapter lines for the Typescript parser and calls the RulesWriter for al the rules in a chapter.
  */
 class TypescriptRulesWriter extends events.EventEmitter implements ITypescriptRulesWriter {
-	private ruleWriters: IRuleWriter[] = [];
-	
-	constructor(private stream: NodeJS.WritableStream) {
+	constructor(private stream: NodeJS.WritableStream, private ruleWriters: IRuleWriter[]) {
 		super();
 	}
 	
@@ -33,8 +30,13 @@ class TypescriptRulesWriter extends events.EventEmitter implements ITypescriptRu
 	}
 	
 	writeRule(rule: IRule): void {
-		var noMatchRuleWriter: IRuleWriter = new NoMatchRuleWriter(this.stream);
-		noMatchRuleWriter.writeRule(rule);
+		var done: boolean = false;
+		this.ruleWriters.forEach((ruleWriter: IRuleWriter) => {
+			if(!done && ruleWriter.isAMatch(rule)) {
+				done = true;
+				ruleWriter.writeRule(rule);
+			}
+		});
 	}	
 }
 

@@ -22,11 +22,14 @@ describe('TypescriptRulesWriter', () => {
 		stringConsts: {start:'', version:'', chapter:''}
 	};
 	
+	var noMatchRuleWritersMock= jasmine.createSpyObj('ruleWritersMock', ['isAMatch', 'writeRule']);
+	noMatchRuleWritersMock.isAMatch.and.returnValue(true);
+	
 	var typescriptRulesWriter: any;
 	
 	beforeEach(()=>{
 		streamMock = jasmine.createSpyObj('streamMock', ['write']);
-		typescriptRulesWriter = new TypescriptRulesWriter(streamMock);
+		typescriptRulesWriter = new TypescriptRulesWriter(streamMock, [noMatchRuleWritersMock]);
 	});
 
 	describe('write', () => {
@@ -37,7 +40,7 @@ describe('TypescriptRulesWriter', () => {
 			// act
 			typescriptRulesWriter.write(assetsMock);
 			
-			// assert
+			// assert 
 			expect(streamMock.write.calls.count()).toBe(1+3); // start line and 3 chapters.
 		});
 
@@ -55,7 +58,7 @@ describe('TypescriptRulesWriter', () => {
 	});
 
 	describe('writeRule', () => {
-		it('should call write on the stream', () => {
+		it('should call writeRule on the noMatchRuleWritersMock', () => {
 			// arrange
 			var rule: IRule = {
 				name: 'test',
@@ -67,7 +70,7 @@ describe('TypescriptRulesWriter', () => {
 			typescriptRulesWriter.writeRule(rule);
 			
 			// assert
-			expect(streamMock.write).toHaveBeenCalled();
+			expect(noMatchRuleWritersMock.writeRule).toHaveBeenCalled();
 		});
 	});	
 });
